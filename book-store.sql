@@ -55,3 +55,11 @@ CREATE TABLE Payment (
     payment_status VARCHAR(20),
     FOREIGN KEY (order_id) REFERENCES `Order`(order_id)
 );
+
+CREATE TABLE Users(
+    userId INT PRIMARY KEY,
+    userName VARCHAR(20),
+    passWord VARCHAR(20),
+    customer_id INT,
+    FOREIGN KEY(customer_id) REFERENCES `Customer`(customer_id)
+);
